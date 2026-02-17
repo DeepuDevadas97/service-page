@@ -36,7 +36,7 @@ html {
     position: absolute;
     filter: blur(140px);
     border-radius: 50%;
-    animation: floatBlob 10s ease-in-out infinite alternate;
+    animation: floatBlob 9s ease-in-out infinite alternate;
     will-change: transform;
 }
 
@@ -45,28 +45,28 @@ html {
     top: -18%;
     left: -10%;
     z-index: 0;
-    animation-duration: 13.2s;
+    animation-duration: 9.2s;
 }
 .secondary-shade {
     background-color: var(--secondary);
     top: -10%;
     right: -20%;
     z-index: 1;
-    animation-duration: 12.8s;
+    animation-duration: 8.8s;
 }
 .primary-shade-b {
     bottom: -22%;
     right: -15%;
     top: unset;
     left: unset;
-    animation-duration: 13.4s;
+    animation-duration: 9.4s;
 }
 .secondary-shade-b {
     bottom: -32%;
     left: -15%;
     top: unset;
     right: unset;
-    animation-duration: 12.6s;
+    animation-duration: 6.6s;
 }
 @keyframes floatBlob {
     0% {
@@ -400,4 +400,22 @@ html {
 
 .service-lists li:last-child {
     margin-bottom: 0;
+}
+
+
+html, body {
+  height: 100%;
+}
+
+#smooth-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#smooth-content {
+  will-change: transform;
 }
