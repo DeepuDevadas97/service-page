@@ -1,58 +1,33 @@
-// Smooth scroll
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-const smoother = ScrollSmoother.create({
-    wrapper: "#smooth-wrapper",
-    content: "#smooth-content",
-    smooth: 1.8,
-    effects: true,
-    smoothTouch: 0.1,
-});
+window.addEventListener("load", () => {
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
+    let mm = gsap.matchMedia();
 
+    mm.add("(min-width: 1280px)", () => {
+        const smoother = ScrollSmoother.create({
+            wrapper: "#smooth-wrapper",
+            content: "#smooth-content",
+            smooth: 1.8,
+            effects: true,
+        });
 
-// Animations for service lists
-let mm = gsap.matchMedia();
-mm.add("(min-width: 1280px)", () => {
-    gsap.from(".service-lists li", {
-        y: 100,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out",
-        stagger: 0.8, 
-        scrollTrigger: {
-            trigger: ".service-lists",
-            start: "top 100%",
-            once: true, 
-        },
+        gsap.from(".service-lists li", {
+            y: 120,
+            opacity: 0,
+            duration: 1.2,
+            ease: "power3.out",
+            stagger: 0.8,
+            scrollTrigger: {
+                trigger: ".service-lists",
+                start: "top 80%",
+                once: true,
+            },
+        });
     });
 });
 
-
-//Smooth scroll
-
-// const content = document.getElementById("smooth-content");
-
-// let current = 0;
-// let target = 0;
-// let ease = 0.08;
-
-// function setBodyHeight() {
-//   document.body.style.height = content.getBoundingClientRect().height + "px";
-// }
-
-// setBodyHeight();
-// window.addEventListener("resize", setBodyHeight);
-
-// window.addEventListener("scroll", () => {
-//   target = window.scrollY;
+// window.addEventListener("load", () => {
+//     document.body.classList.add("loaded");
 // });
 
-// function smoothScroll() {
-//   current += (target - current) * ease;
-  
-//   content.style.transform = `translateY(-${current}px)`;
 
-//   requestAnimationFrame(smoothScroll);
-// }
-
-// smoothScroll();
