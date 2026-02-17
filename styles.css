@@ -403,7 +403,7 @@ html {
 }
 
 
-html, body {
+/* html, body {
   height: 100%;
 }
 
@@ -418,4 +418,4 @@ html, body {
 
 #smooth-content {
   will-change: transform;
-}
+} */

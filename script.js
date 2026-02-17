@@ -1,12 +1,12 @@
 // Smooth scroll
-// gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-// const smoother = ScrollSmoother.create({
-//     wrapper: "#smooth-wrapper",
-//     content: "#smooth-content",
-//     smooth: 2,
-//     effects: true,
-//     smoothTouch: 0.1,
-// });
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+const smoother = ScrollSmoother.create({
+    wrapper: "#smooth-wrapper",
+    content: "#smooth-content",
+    smooth: 1.8,
+    effects: true,
+    smoothTouch: 0.1,
+});
 
 
 
@@ -30,29 +30,29 @@ mm.add("(min-width: 1280px)", () => {
 
 //Smooth scroll
 
-const content = document.getElementById("smooth-content");
+// const content = document.getElementById("smooth-content");
 
-let current = 0;
-let target = 0;
-let ease = 0.08;
+// let current = 0;
+// let target = 0;
+// let ease = 0.08;
 
-function setBodyHeight() {
-  document.body.style.height = content.getBoundingClientRect().height + "px";
-}
+// function setBodyHeight() {
+//   document.body.style.height = content.getBoundingClientRect().height + "px";
+// }
 
-setBodyHeight();
-window.addEventListener("resize", setBodyHeight);
+// setBodyHeight();
+// window.addEventListener("resize", setBodyHeight);
 
-window.addEventListener("scroll", () => {
-  target = window.scrollY;
-});
+// window.addEventListener("scroll", () => {
+//   target = window.scrollY;
+// });
 
-function smoothScroll() {
-  current += (target - current) * ease;
+// function smoothScroll() {
+//   current += (target - current) * ease;
   
-  content.style.transform = `translateY(-${current}px)`;
+//   content.style.transform = `translateY(-${current}px)`;
 
-  requestAnimationFrame(smoothScroll);
-}
+//   requestAnimationFrame(smoothScroll);
+// }
 
-smoothScroll();
+// smoothScroll();
