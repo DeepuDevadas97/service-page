@@ -144,16 +144,25 @@ a {
     transition: 0.4s;
 }
 .list-right {
-    width: 0;
-    padding: 0;
-    /* transition: 1.2s; */
-    transition: 1.2s cubic-bezier(0.5, 0, 0.3, 1);
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right center;
     opacity: 0;
+    transition:
+        transform 0.8s cubic-bezier(0.77, 0, 0.175, 1),
+        opacity 0.4s ease;
+    will-change: transform;
+    padding-block: 24px;
 }
+.service-lists li:hover .list-right {
+    transform: scaleX(1);
+    opacity: 1;
+}
+
 .list-right .arrow-right {
     transform: translateX(0);
-    transition: 0.8s;
-    transition-delay: 0.47s;
+    transition: 0.3s;
+    transition-delay: 0.58s;
     opacity: 0;
 }
 .list-right .list-img {
@@ -208,8 +217,7 @@ a {
         gap: 60px;
         letter-spacing: 32px;
     }
-    .service-lists li:hover .list-right {
-        width: 100%;
+    .list-right {
         padding-block: 28px;
     }
     .list-right .arrow-right {
@@ -268,7 +276,7 @@ a {
     .list-right .list-img {
         max-width: 60px;
     }
-    .service-lists li:hover .list-right {
+    .list-right {
         padding-block: 16px;
     }
     .service-lists li:hover .arrow-right {
@@ -393,7 +401,7 @@ a {
     .list-right .list-img {
         max-width: 24px;
     }
-    .service-lists li:hover .list-right {
+    .list-right {
         padding-block: 12px;
     }
     .service-lists li:hover .list-img {
@@ -506,5 +514,6 @@ a {
         left: -27%;
     }
 }
+
 
 
