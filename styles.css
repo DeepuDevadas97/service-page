@@ -116,7 +116,6 @@ a {
 
 .header-line {
     animation: growLine 1.4s ease-in;
-    animation-delay: 0.3s;
 }
 @keyframes growLine {
     0% {
@@ -507,3 +506,4 @@ a {
         left: -27%;
     }
 }
+
