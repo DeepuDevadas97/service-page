@@ -175,13 +175,6 @@ a {
 .service-lists li:hover a {
     color: var(--light);
 }
-
-.service-lists li:hover .list-right {
-    width: 100%;
-    padding-block: 24px;
-    opacity: 1;
-    visibility: visible;
-}
 .service-lists li:hover .arrow-right {
     transform: translateX(28px);
     opacity: 1;
@@ -514,6 +507,7 @@ a {
         left: -27%;
     }
 }
+
 
 
 
