@@ -83,13 +83,13 @@ a {
             transform: translate(8%, -5%) rotate(90deg) scale(1.05);
         }
         50% {
-            transform: translate(-5%, -5%) rotate(180deg) scale(1.02);
+            transform: translate(-2%, -5%) rotate(180deg) scale(1.02);
         }
         75% {
             transform: translate(0%, 0%) rotate(270deg) scale(1.03);
         }
         100% {
-            transform: translate(-8%, 5%) rotate(360deg) scale(1);
+            transform: translate(3%, 3%) rotate(360deg) scale(1.1);
         }
     }
 }
@@ -506,4 +506,5 @@ a {
         left: -27%;
     }
 }
+
 
